@@ -2,11 +2,11 @@ HTSHELLS - Self contained .htaccess web "shells"
 Pick the one you need and rename it to .htaccess and upload it.
 
 Some notes on the shells
-- htaccess.cgi
-
 - htaccess.php
+  PHP based web shell access via http://domain/path/.htaccess
 
 - htaccess.ssi
+  Server Side Include based web shell, access via http://domain/path/.htaccess
 
 - htaccess.server-info
   This is not a genuine shell, but rather a self contained information disclosure attack
