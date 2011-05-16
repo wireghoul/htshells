@@ -1,0 +1,17 @@
+HTSHELLS - Self contained .htaccess web "shells"
+Pick the one you need and rename it to .htaccess and upload it.
+
+Some notes on the shells
+- htaccess.cgi
+
+- htaccess.php
+
+- htaccess.ssi
+
+- htaccess.server-info
+  This is not a genuine shell, but rather a self contained information disclosure attack
+
+- htaccess.server-status
+  This is not a genuine shell, but rather a self contained information disclosure attack
+
+Wireghoul - http://www.justanotherhacker.com
