@@ -1,4 +1,4 @@
-# Self contained .htacces web shell - Part of the htshell project
+# Self contained .htaccess web shell - Part of the htshell project
 # Written by Wireghoul - http://www.justanotherhacker.com
 
 # Override default deny rule to make .htaccess file accessible over web
