@@ -1,0 +1,4 @@
+# Caucho status require the Resin (java server) mod_caucho module
+# This file will make any request to the parent directory return a caucho status page
+# The file does not have to exist for this to work
+SetHandler caucho-status
