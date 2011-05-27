@@ -1,23 +1,26 @@
 HTSHELLS - Self contained .htaccess web "shells"
 Pick the one you need and rename it to .htaccess and upload it.
 
-Some notes on the shells
+[[Web shells]]
+Command executing shells. Executes comands from the query parameter c.
 - htaccess.php
-  PHP based web shell access via http://domain/path/.htaccess
+  PHP based web shell access via http://domain/path/.htaccess?c=command
 
 - htaccess.ssi
-  Server Side Include based web shell, access via http://domain/path/.htaccess
+  Server Side Include based web shell, access via http://domain/path/.htaccess?c=command
 
+[[Information disclosure attacks]]
+These are not shells, but rather a self contained information disclosure attack.
 - htaccess.server-info
   Server info binding for Apache
-  This is not a genuine shell, but rather a self contained information disclosure attack
 
 - htaccess.server-status
   Server status binding for Apache
-  This is not a genuine shell, but rather a self contained information disclosure attack
 
 - htaccess.caucho-stats
   Server status binding for the mod_caucho Resin java server module
-  This is not a genuine shell, but rather a self contained information disclosure attack
+
+- htaccess.ldap-status
+  Server status binding for the mod_ldap server module
 
 Wireghoul - http://www.justanotherhacker.com
