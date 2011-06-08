@@ -1,26 +1,34 @@
-HTSHELLS - Self contained .htaccess web "shells"
-Pick the one you need and rename it to .htaccess and upload it.
+HTSHELLS - Self contained web shells and other attacks via .htaccess files.
 
-[[Web shells]]
-Command executing shells. Executes comands from the query parameter c.
-- htaccess.php
+Attacks are named in the following fashion, module.attack.htaccess.
+Pick the one you need and copy it to a new file named .htaccess, check the file to see if it needs editing before you upload it.
+Web shells executes commands from the query parameter c, unless the file states otherwise.
+
+- htaccess.php 
   PHP based web shell access via http://domain/path/.htaccess?c=command
 
-- htaccess.ssi
-  Server Side Include based web shell, access via http://domain/path/.htaccess?c=command
-
-[[Information disclosure attacks]]
-These are not shells, but rather a self contained information disclosure attack.
 - htaccess.server-info
   Server info binding for Apache
 
 - htaccess.server-status
   Server status binding for Apache
 
-- htaccess.caucho-stats
+- mod_auth_remote.phish.htaccess *untested*
+  Forward basic auth credentials to server of your choice
+
+- mod_caucho.info.htaccess *untested*
   Server status binding for the mod_caucho Resin java server module
 
-- htaccess.ldap-status
+- mod_cgi.shell.windows.htaccess *untested*
+  Gives shell through php.exe via apache cgi configuration directives
+
+- mod_include.shell.htaccess
+  Server Side Include based web shell, access via http://domain/path/.htaccess?c=command
+
+- mod_ldap.info.htaccess *untested*
   Server status binding for the mod_ldap server module
+
+- mod_sendmail.rce.htaccess *untested*
+  Executes commands configured in the .htaccess file by specifying path and arguments to "sendmail" binary
 
 Wireghoul - http://www.justanotherhacker.com
