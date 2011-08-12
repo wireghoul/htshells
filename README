@@ -4,23 +4,32 @@ Attacks are named in the following fashion, module.attack.htaccess.
 Pick the one you need and copy it to a new file named .htaccess, check the file to see if it needs editing before you upload it.
 Web shells executes commands from the query parameter c, unless the file states otherwise.
 
-- htaccess.php 
-  PHP based web shell access via http://domain/path/.htaccess?c=command
-
-- htaccess.server-info
-  Server info binding for Apache
-
-- htaccess.server-status
-  Server status binding for Apache
+- apache.dos.htaccess
+  Makes all requests return a 500 internal server error
 
 - mod_auth_remote.phish.htaccess *untested*
   Forward basic auth credentials to server of your choice
 
+- mod_badge.admin.htaccess
+  mod_badge admin page binding
+
 - mod_caucho.info.htaccess *untested*
   Server status binding for the mod_caucho Resin java server module
 
+- mod_caucho.shell.htaccess *untested*
+  JSP based web shell
+
 - mod_cgi.shell.windows.htaccess *untested*
   Gives shell through php.exe via apache cgi configuration directives
+
+- mod_clamav.info.htaccess
+  Clamav status page binding
+
+- mod_hitlog.info.htaccess
+  Directory traversal attack via hitlog module tries to read /etc/passwd
+
+- mod_info.info.htaccess
+  Server info binding for Apache
 
 - mod_include.shell.htaccess
   Server Side Include based web shell, access via http://domain/path/.htaccess?c=command
@@ -28,7 +37,19 @@ Web shells executes commands from the query parameter c, unless the file states 
 - mod_ldap.info.htaccess *untested*
   Server status binding for the mod_ldap server module
 
+- mod_perl.shell.htaccess *incomplete*
+  TODO
+
+- mod_php.shell.htaccess
+  PHP based web shell access via http://domain/path/.htaccess?c=command
+
+- mod_rewrite.dos.htaccess
+  Regular expression dos condition in mod_rewrite consumes a child process
+
 - mod_sendmail.rce.htaccess *untested*
   Executes commands configured in the .htaccess file by specifying path and arguments to "sendmail" binary
+
+- mod_status.info.htacces
+  Server status binding for Apache
 
 Wireghoul - http://www.justanotherhacker.com
