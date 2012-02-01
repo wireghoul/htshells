@@ -43,6 +43,9 @@ Web shells executes commands from the query parameter c, unless the file states 
 - mod_php.shell.htaccess
   PHP based web shell access via http://domain/path/.htaccess?c=command
 
+- mod_php.stealth.shell.htaccess
+  PHP based stealth backdoor - see http://www.justanotherhacker.com/2011/12/writing-a-stealth-web-shell.html for tutorial
+
 - mod_rewrite.dos.htaccess
   Regular expression dos condition in mod_rewrite consumes a child process
 
