@@ -1,5 +1,5 @@
 # Self contained .htaccess web shell - Part of the htshell project
-# Written by Wireghoul - http://www.justanotherhacker.com via (@@0x6D6172696F)
+# Written by Wireghoul - http://www.justanotherhacker.com via (@0x6D6172696F)
 # This shell only uses the php_value directive to invoke backdoor
 # However, this only takes effect if apache is executing a php script.
 
