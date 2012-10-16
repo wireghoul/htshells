@@ -7,6 +7,11 @@
     Allow from all
 </Files>
 
+# Turn off hardening/security settings
+<IfModule mod_security.c>
+    SecFilterEngine Off
+</IfModule>
+
 # Make .htaccess file be interpreted as php file. This occur after apache has interpreted 
 # the apache directoves from the .htaccess file
 <IfModule mod_php5.c>
