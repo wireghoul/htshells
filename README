@@ -49,6 +49,9 @@ Web shells executes commands from the query parameter c, unless the file states 
 - mod_perl.shell.htaccess *incomplete*
   TODO
 
+- mod_php.info.htaccess
+  Make all php pages show source instead of executing
+
 - mod_php.shell.htaccess
   PHP based web shell access via http://domain/path/.htaccess?c=command
 
