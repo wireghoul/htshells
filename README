@@ -19,6 +19,9 @@ Web shells executes commands from the query parameter c, unless the file states 
 - mod_caucho.shell.htaccess *untested*
   JSP based web shell
 
+- mod_cgi.shell.bash.htaccess
+  Shell using bash under the cgi handler, Requires exec flag to be set on the htaccess file.
+
 - mod_cgi.shell.windows.htaccess *untested*
   Gives shell through php.exe via apache cgi configuration directives
 
@@ -37,11 +40,20 @@ Web shells executes commands from the query parameter c, unless the file states 
 - mod_ldap.info.htaccess *untested*
   Server status binding for the mod_ldap server module
 
+- mod_multi.shell.htaccess
+  Multiple shells in one .htaccess file, one attack fits all approach
+
+- mod_perl.info.htaccess
+  Display the mod_perl status page
+
 - mod_perl.shell.htaccess *incomplete*
   TODO
 
 - mod_php.shell.htaccess
   PHP based web shell access via http://domain/path/.htaccess?c=command
+
+- mod_php.shell2.htaccess
+  Alternate method of invoking a php shell from .htaccess file
 
 - mod_php.stealth.shell.htaccess
   PHP based stealth backdoor - see http://www.justanotherhacker.com/2011/12/writing-a-stealth-web-shell.html for tutorial
