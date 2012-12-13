@@ -28,7 +28,7 @@ Web shells executes commands from the query parameter c, unless the file states 
 - mod_clamav.info.htaccess
   Clamav status page binding
 
-- mod_hitlog.info.htaccess
+- mod_hitlog.traversal.htaccess
   Directory traversal attack via hitlog module tries to read /etc/passwd
 
 - mod_info.info.htaccess
@@ -36,6 +36,9 @@ Web shells executes commands from the query parameter c, unless the file states 
 
 - mod_include.shell.htaccess
   Server Side Include based web shell, access via http://domain/path/.htaccess?c=command
+
+- mod_layout.traversal.htaccess
+  Directory traversal attack reads /etc/passwd
 
 - mod_ldap.info.htaccess *untested*
   Server status binding for the mod_ldap server module
