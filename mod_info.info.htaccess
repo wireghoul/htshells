@@ -1,3 +1,0 @@
-# This file will make any request to the parent directory return a server info page
-# The file does not have to exist for this to work
-SetHandler server-info
