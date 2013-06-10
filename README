@@ -1,21 +1,42 @@
 HTSHELLS - Self contained web shells and other attacks via .htaccess files.
 
-Attacks are named in the following fashion, module.attack.htaccess.
-Pick the one you need and copy it to a new file named .htaccess, check the file to see if it needs editing before you upload it.
-Web shells executes commands from the query parameter c, unless the file states otherwise.
+Attacks are named in the following fashion, module.attack.htaccess and grouped
+by attack type in directories. Pick the one you need and copy it to a new file
+named .htaccess, check the file to see if it needs editing before you upload it.
+Web shells executes commands from the query parameter c, unless the file states
+otherwise.
 
+== DOS/       # Denial of serive attacks
 - apache.dos.htaccess
   Makes all requests return a 500 internal server error
 
-- mod_auth_remote.phish.htaccess *untested*
-  Forward basic auth credentials to server of your choice
+- mod_rewrite.dos.htaccess
+  Regular expression dos condition in mod_rewrite consumes a child process
 
-- mod_badge.admin.htaccess
-  mod_badge admin page binding
-
+== INFO/      # Information disclosure attacks
 - mod_caucho.info.htaccess *untested*
   Server status binding for the mod_caucho Resin java server module
 
+- mod_clamav.info.htaccess
+  Clamav status page binding
+
+- mod_info.info.htaccess
+  Server info binding for Apache
+
+- mod_ldap.info.htaccess *untested*
+  Server status binding for the mod_ldap server module
+
+- mod_perl.info.htaccess
+  Display the mod_perl status page
+
+- mod_php.info.htaccess
+  Make all php pages show source instead of executing
+
+- mod_status.info.htacces
+  Server status binding for Apache
+
+
+== SHELL/       # Interactive command execution
 - mod_caucho.shell.htaccess *untested*
   JSP based web shell
 
@@ -25,35 +46,14 @@ Web shells executes commands from the query parameter c, unless the file states 
 - mod_cgi.shell.windows.htaccess *untested*
   Gives shell through php.exe via apache cgi configuration directives
 
-- mod_clamav.info.htaccess
-  Clamav status page binding
-
-- mod_hitlog.traversal.htaccess
-  Directory traversal attack via hitlog module tries to read /etc/passwd
-
-- mod_info.info.htaccess
-  Server info binding for Apache
-
 - mod_include.shell.htaccess
-  Server Side Include based web shell, access via http://domain/path/.htaccess?c=command
-
-- mod_layout.traversal.htaccess
-  Directory traversal attack reads /etc/passwd
-
-- mod_ldap.info.htaccess *untested*
-  Server status binding for the mod_ldap server module
+  Server Side Include based web shell
 
 - mod_multi.shell.htaccess
   Multiple shells in one .htaccess file, one attack fits all approach
 
-- mod_perl.info.htaccess
-  Display the mod_perl status page
-
 - mod_perl.shell.htaccess *incomplete*
   TODO
-
-- mod_php.info.htaccess
-  Make all php pages show source instead of executing
 
 - mod_php.shell.htaccess
   PHP based web shell access via http://domain/path/.htaccess?c=command
@@ -64,13 +64,28 @@ Web shells executes commands from the query parameter c, unless the file states 
 - mod_php.stealth.shell.htaccess
   PHP based stealth backdoor - see http://www.justanotherhacker.com/2011/12/writing-a-stealth-web-shell.html for tutorial
 
-- mod_rewrite.dos.htaccess
-  Regular expression dos condition in mod_rewrite consumes a child process
+- mod_python.shell.htaccess
+
+- mod_ruby.shell.htaccess
+
+- mod_suphp.shell.htaccess
+
+== TRAVERSAL/   # Directory traversal attacks
+- mod_hitlog.traversal.htaccess
+  Directory traversal attack via hitlog module tries to read /etc/passwd
+
+- mod_layout.traversal.htaccess
+  Directory traversal attack reads /etc/passwd
+
+
+== ./           # Various attacks
+- mod_auth_remote.phish.htaccess *untested*
+  Forward basic auth credentials to server of your choice
+
+- mod_badge.admin.htaccess
+  mod_badge admin page binding
 
 - mod_sendmail.rce.htaccess *untested*
   Executes commands configured in the .htaccess file by specifying path and arguments to "sendmail" binary
-
-- mod_status.info.htacces
-  Server status binding for Apache
 
 Wireghoul - http://www.justanotherhacker.com
