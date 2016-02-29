@@ -1,0 +1,264 @@
+<IfModule mod_apparmor.c>
+  Header always set X-Apache-ModCheck-mod_apparmor.c Active
+</IfModule>
+<IfModule mod_apreq2.c>
+  Header always set X-Apache-ModCheck-mod_apreq2.c Active
+</IfModule>
+<IfModule mod_auth_cas.c>
+  Header always set X-Apache-ModCheck-mod_auth_cas.c Active
+</IfModule>
+<IfModule mod_auth_kerb.c>
+  Header always set X-Apache-ModCheck-mod_auth_kerb.c Active
+</IfModule>
+<IfModule mod_auth_mellon.c>
+  Header always set X-Apache-ModCheck-mod_auth_mellon.c Active
+</IfModule>
+<IfModule mod_auth_memcookie.c>
+  Header always set X-Apache-ModCheck-mod_auth_memcookie.c Active
+</IfModule>
+<IfModule mod_auth_mysql.c>
+  Header always set X-Apache-ModCheck-mod_auth_mysql.c Active
+</IfModule>
+<IfModule mod_authn_sasl.c>
+  Header always set X-Apache-ModCheck-mod_authn_sasl.c Active
+</IfModule>
+<IfModule mod_auth_ntlm_winbin.c>
+  Header always set X-Apache-ModCheck-mod_auth_ntlm_winbin.c Active
+</IfModule>
+<IfModule mod_authn_webid.c>
+  Header always set X-Apache-ModCheck-mod_authn_webid.c Active
+</IfModule>
+<IfModule mod_authn_yubikey.c>
+  Header always set X-Apache-ModCheck-mod_authn_yubikey.c Active
+</IfModule>
+<IfModule mod_authnz_external.c>
+  Header always set X-Apache-ModCheck-mod_authnz_external.c Active
+</IfModule>
+<IfModule mod_auth_openid.c>
+  Header always set X-Apache-ModCheck-mod_auth_openid.c Active
+</IfModule>
+<IfModule mod_auth_pgsql.c>
+  Header always set X-Apache-ModCheck-mod_auth_pgsql.c Active
+</IfModule>
+<IfModule mod_auth_plain.c>
+  Header always set X-Apache-ModCheck-mod_auth_plain.c Active
+</IfModule>
+<IfModule mod_auth_pubtkt.c>
+  Header always set X-Apache-ModCheck-mod_auth_pubtkt.c Active
+</IfModule>
+<IfModule mod_auth_radius.c>
+  Header always set X-Apache-ModCheck-mod_auth_radius.c Active
+</IfModule>
+<IfModule mod_auth_tkt.c>
+  Header always set X-Apache-ModCheck-mod_auth_tkt.c Active
+</IfModule>
+<IfModule mod_authz_unixgroup.c>
+  Header always set X-Apache-ModCheck-mod_authz_unixgroup.c Active
+</IfModule>
+<IfModule mod_axis2c.c>
+  Header always set X-Apache-ModCheck-mod_axis2c.c Active
+</IfModule>
+<IfModule mod_bw.c>
+  Header always set X-Apache-ModCheck-mod_bw.c Active
+</IfModule>
+<IfModule mod_dacs.c>
+  Header always set X-Apache-ModCheck-mod_dacs.c Active
+</IfModule>
+<IfModule mod_defensible.c>
+  Header always set X-Apache-ModCheck-mod_defensible.c Active
+</IfModule>
+<IfModule mod_dnssd.c>
+  Header always set X-Apache-ModCheck-mod_dnssd.c Active
+</IfModule>
+<IfModule mod_encoding.c>
+  Header always set X-Apache-ModCheck-mod_encoding.c Active
+</IfModule>
+<IfModule mod_evasive.c>
+  Header always set X-Apache-ModCheck-mod_evasive.c Active
+</IfModule>
+<IfModule mod_fastcgi.c>
+  Header always set X-Apache-ModCheck-mod_fastcgi.c Active
+</IfModule>
+<IfModule mod_fcgid.c>
+  Header always set X-Apache-ModCheck-mod_fcgid.c Active
+</IfModule>
+<IfModule mod_fcgid_dbg.c>
+  Header always set X-Apache-ModCheck-mod_fcgid_dbg.c Active
+</IfModule>
+<IfModule mod_geoip.c>
+  Header always set X-Apache-ModCheck-mod_geoip.c Active
+</IfModule>
+<IfModule mod_gnutls.c>
+  Header always set X-Apache-ModCheck-mod_gnutls.c Active
+</IfModule>
+<IfModule mod_jk.c>
+  Header always set X-Apache-ModCheck-mod_jk.c Active
+</IfModule>
+<IfModule mod_ldap_userdir.c>
+  Header always set X-Apache-ModCheck-mod_ldap_userdir.c Active
+</IfModule>
+<IfModule mod_ldap_userdir_dbg.c>
+  Header always set X-Apache-ModCheck-mod_ldap_userdir_dbg.c Active
+</IfModule>
+<IfModule mod_lisp.c>
+  Header always set X-Apache-ModCheck-mod_lisp.c Active
+</IfModule>
+<IfModule mod_log_slow.c>
+  Header always set X-Apache-ModCheck-mod_log_slow.c Active
+</IfModule>
+<IfModule mod_log_sql.c>
+  Header always set X-Apache-ModCheck-mod_log_sql.c Active
+</IfModule>
+<IfModule mod_log_sql_dbi.c>
+  Header always set X-Apache-ModCheck-mod_log_sql_dbi.c Active
+</IfModule>
+<IfModule mod_log_sql_mysql.c>
+  Header always set X-Apache-ModCheck-mod_log_sql_mysql.c Active
+</IfModule>
+<IfModule mod_log_sql_ssl.c>
+  Header always set X-Apache-ModCheck-mod_log_sql_ssl.c Active
+</IfModule>
+<IfModule mod_macro.c>
+  Header always set X-Apache-ModCheck-mod_macro.c Active
+</IfModule>
+<IfModule mod_mapcache.c>
+  Header always set X-Apache-ModCheck-mod_mapcache.c Active
+</IfModule>
+<IfModule mod_mime_xattr.c>
+  Header always set X-Apache-ModCheck-mod_mime_xattr.c Active
+</IfModule>
+<IfModule mod_mono.c>
+  Header always set X-Apache-ModCheck-mod_mono.c Active
+</IfModule>
+<IfModule mod_musicindex.c>
+  Header always set X-Apache-ModCheck-mod_musicindex.c Active
+</IfModule>
+<IfModule mod_neko.c>
+  Header always set X-Apache-ModCheck-mod_neko.c Active
+</IfModule>
+<IfModule mod_netcgi_apache.c>
+  Header always set X-Apache-ModCheck-mod_netcgi_apache.c Active
+</IfModule>
+<IfModule mod_nss.c>
+  Header always set X-Apache-ModCheck-mod_nss.c Active
+</IfModule>
+<IfModule mod_ocamlnet.c>
+  Header always set X-Apache-ModCheck-mod_ocamlnet.c Active
+</IfModule>
+<IfModule mod_parser3.c>
+  Header always set X-Apache-ModCheck-mod_parser3.c Active
+</IfModule>
+<IfModule mod_passenger.c>
+  Header always set X-Apache-ModCheck-mod_passenger.c Active
+</IfModule>
+<IfModule mod_perl2.c>
+  Header always set X-Apache-ModCheck-mod_perl2.c Active
+</IfModule>
+<IfModule mod_perl2_dev.c>
+  Header always set X-Apache-ModCheck-mod_perl2_dev.c Active
+</IfModule>
+<IfModule mod_perl2_doc.c>
+  Header always set X-Apache-ModCheck-mod_perl2_doc.c Active
+</IfModule>
+<IfModule mod_php5.c>
+  Header always set X-Apache-ModCheck-mod_php5.c Active
+</IfModule>
+<IfModule mod_php5filter.c>
+  Header always set X-Apache-ModCheck-mod_php5filter.c Active
+</IfModule>
+<IfModule mod_proxy_html.c>
+  Header always set X-Apache-ModCheck-mod_proxy_html.c Active
+</IfModule>
+<IfModule mod_proxy_msrpc.c>
+  Header always set X-Apache-ModCheck-mod_proxy_msrpc.c Active
+</IfModule>
+<IfModule mod_proxy_uwsgi.c>
+  Header always set X-Apache-ModCheck-mod_proxy_uwsgi.c Active
+</IfModule>
+<IfModule mod_proxy_uwsgi_dbg.c>
+  Header always set X-Apache-ModCheck-mod_proxy_uwsgi_dbg.c Active
+</IfModule>
+<IfModule mod_python.c>
+  Header always set X-Apache-ModCheck-mod_python.c Active
+</IfModule>
+<IfModule mod_python_doc.c>
+  Header always set X-Apache-ModCheck-mod_python_doc.c Active
+</IfModule>
+<IfModule mod_qos.c>
+  Header always set X-Apache-ModCheck-mod_qos.c Active
+</IfModule>
+<IfModule mod_removeip.c>
+  Header always set X-Apache-ModCheck-mod_removeip.c Active
+</IfModule>
+<IfModule mod_rivet.c>
+  Header always set X-Apache-ModCheck-mod_rivet.c Active
+</IfModule>
+<IfModule mod_rivet_doc.c>
+  Header always set X-Apache-ModCheck-mod_rivet_doc.c Active
+</IfModule>
+<IfModule mod_rpaf.c>
+  Header always set X-Apache-ModCheck-mod_rpaf.c Active
+</IfModule>
+<IfModule mod_ruby.c>
+  Header always set X-Apache-ModCheck-mod_ruby.c Active
+</IfModule>
+<IfModule mod_ruid2.c>
+  Header always set X-Apache-ModCheck-mod_ruid2.c Active
+</IfModule>
+<IfModule mod_ruwsgi.c>
+  Header always set X-Apache-ModCheck-mod_ruwsgi.c Active
+</IfModule>
+<IfModule mod_ruwsgi_dbg.c>
+  Header always set X-Apache-ModCheck-mod_ruwsgi_dbg.c Active
+</IfModule>
+<IfModule mod_scgi.c>
+  Header always set X-Apache-ModCheck-mod_scgi.c Active
+</IfModule>
+<IfModule mod_security2.c>
+  Header always set X-Apache-ModCheck-mod_security2.c Active
+</IfModule>
+<IfModule mod_shib2.c>
+  Header always set X-Apache-ModCheck-mod_shib2.c Active
+</IfModule>
+<IfModule mod_spamhaus.c>
+  Header always set X-Apache-ModCheck-mod_spamhaus.c Active
+</IfModule>
+<IfModule mod_suphp.c>
+  Header always set X-Apache-ModCheck-mod_suphp.c Active
+</IfModule>
+<IfModule mod_svn.c>
+  Header always set X-Apache-ModCheck-mod_svn.c Active
+</IfModule>
+<IfModule mod_upload_progress.c>
+  Header always set X-Apache-ModCheck-mod_upload_progress.c Active
+</IfModule>
+<IfModule mod_uwsgi.c>
+  Header always set X-Apache-ModCheck-mod_uwsgi.c Active
+</IfModule>
+<IfModule mod_uwsgi_dbg.c>
+  Header always set X-Apache-ModCheck-mod_uwsgi_dbg.c Active
+</IfModule>
+<IfModule mod_vhost_ldap.c>
+  Header always set X-Apache-ModCheck-mod_vhost_ldap.c Active
+</IfModule>
+<IfModule mod_watchcat.c>
+  Header always set X-Apache-ModCheck-mod_watchcat.c Active
+</IfModule>
+<IfModule mod_webauth.c>
+  Header always set X-Apache-ModCheck-mod_webauth.c Active
+</IfModule>
+<IfModule mod_webauthldap.c>
+  Header always set X-Apache-ModCheck-mod_webauthldap.c Active
+</IfModule>
+<IfModule mod_webkdc.c>
+  Header always set X-Apache-ModCheck-mod_webkdc.c Active
+</IfModule>
+<IfModule mod_wsgi.c>
+  Header always set X-Apache-ModCheck-mod_wsgi.c Active
+</IfModule>
+<IfModule mod_wsgi_py3.c>
+  Header always set X-Apache-ModCheck-mod_wsgi_py3.c Active
+</IfModule>
+<IfModule mod_xsendfile.c>
+  Header always set X-Apache-ModCheck-mod_xsendfile.c Active
+</IfModule>
