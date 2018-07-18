@@ -6,7 +6,7 @@ named .htaccess, check the file to see if it needs editing before you upload it.
 Web shells executes commands from the query parameter c, unless the file states
 otherwise.
 
-== DOS/       # Denial of serive attacks
+== DOS/       # Denial of service attacks
 - apache.dos.htaccess
   Makes all requests return a 500 internal server error
 
@@ -14,6 +14,9 @@ otherwise.
   Regular expression dos condition in mod_rewrite consumes a child process
 
 == INFO/      # Information disclosure attacks
+- modcheck/
+  Include additional response headers to indicate which Apache modules are active
+  
 - mod_caucho.info.htaccess *untested*
   Server status binding for the mod_caucho Resin java server module
 
